@@ -9,28 +9,12 @@
     <script>
         let options = Number(prompt('1. Airtime Self \n 2. Airtime Others\n 3. Data\n 4. Transfer'));
         switch(options) {
-            case 1: 
-                let airtimeAmount = Number(prompt('Enter Airtime Amount'));
-                confirm('Are you sure you want to buy ' + airtimeAmount + ' Airtime');
-                alert('You have successfully recharged ' + airtimeAmount + ' Airtime');
-            break;
-            case 2: <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        let options = Number(prompt('1. Airtime Self \n 2. Airtime Others\n 3. Data\n 4. Transfer'));
-        switch(options) {
             //Airtime self
             case 1: 
                 let airtimeAmount = Number(prompt('Enter Airtime Amount'));
                 let verify = confirm('Are you sure you want to buy ' + airtimeAmount + ' Airtime');
                 if(verify) {
-                    alert('You have successfully recharged ' + airtimeAmount + ' Airtime')
+                    alert('You have successfully recharged ' + airtimeAmount + ' Airtime');
                 }else {
                     alert('Transaction Cancelled')
                 }
@@ -42,7 +26,7 @@
                 let airtimeAmountOther = Number(prompt('Enter Airtime Amount'));
                 let verify2 = confirm('Are you sure you want to buy ' + airtimeAmountOther + ' Airtime to ' + phoneNumber);
                 if(verify2) {
-                    alert('You have successfully recharged ' + airtimeAmountOther + ' Airtime to ' + phoneNumber)
+                    alert('You have successfully recharged ' + airtimeAmountOther + ' Airtime to ' + phoneNumber);
                 }else {
                     alert('Transaction Cancelled')
                 } 
@@ -55,7 +39,7 @@
                 let network = prompt('Enter Network Name\nMTN \n GLO\n Airtel\n 9mobile');
                 let verify3 = confirm('Are you sure you want to buy ' + dataAmount + ' Data to ' + dataPhoneNumber + ' on ' + network + 'network');
                 if(verify3) {
-                    alert('You have successfully recharged ' + dataAmount + ' Data to ' + dataPhoneNumber)
+                    alert('You have successfully recharged ' + dataAmount + ' Data to ' + dataPhoneNumber);
                 }else {
                     alert('Transaction Cancelled')
                 }
@@ -68,38 +52,11 @@
                 let bank = prompt('Enter Bank Name\n GTB \n First Bank\n Access Bank\n Zenith Bank\n Echo Bank\n Wema Bank\n Polaris Bank\n FCMB');
                 let verify4 = confirm('Do you want to transfer ' + transferAmount + ' to ' + accountNumber + ' of ' + bank);
                 if(verify4) {
-                    alert('You have successfully transferred ' + transferAmount + ' to ' + accountNumber + ' of ' + bank)
+                    alert('You have successfully transferred ' + transferAmount + ' to ' + accountNumber + ' of ' + bank);
                 }else {
                     alert('Transaction Cancelled')
                 }
                 location.reload();
-            break;
-            default:
-                alert('Invalid Option');
-                location.reload();
-        }
-        
-    </script>
-</body>
-</html>
-                let phoneNumber = Number(prompt('Enter Third Party Phone Number'));
-                let airtimeAmountOther = Number(prompt('Enter Airtime Amount'));
-                confirm('Are you sure you want to buy ' + airtimeAmountOther + ' Airtime to ' + phoneNumber);
-                alert('You have successfully recharged ' + airtimeAmountOther + ' Airtime to ' + phoneNumber);
-            break;
-            case 3: 
-                let dataPhoneNumber = Number(prompt('Enter Third Party Phone Number'));
-                let dataAmount = Number(prompt('Enter Data Amount'));
-                let network = prompt('Enter Network Name\nMTN \n GLO\n Airtel\n 9mobile');
-                confirm('Are you sure you want to buy ' + dataAmount + ' Airtime to ' + dataPhoneNumber);
-                alert('You have successfully recharged ' + dataAmount + ' Airtime to ' + dataPhoneNumber);
-            break;
-            case 4:
-                let transferAmount = Number(prompt('Enter Amount'));
-                let accountNumber = Number(prompt('Enter Account Number'));
-                let bank = prompt('Enter Bank Name\n GTB \n First Bank\n Access Bank\n Zenith Bank\n Echo Bank\n Wema Bank\n Polaris Bank\n FCMB');
-                confirm('Do you want to transfer ' + transferAmount + ' to ' + accountNumber + ' of ' + bank);
-                alert('You have successfully transferred ' + transferAmount + ' to ' + accountNumber + ' of ' + bank);
             break;
             default:
                 alert('Invalid Option');
