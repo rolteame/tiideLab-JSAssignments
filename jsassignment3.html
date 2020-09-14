@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let answer;
+
+        let addition = (numberOne,numberTwo) => {
+            answer = numberOne + numberTwo;
+        }
+        let subtraction = (numberOne,numberTwo) => {
+            answer = numberOne - numberTwo;
+        }
+        let division = (numberOne,numberTwo) => {
+            answer = numberOne / numberTwo;
+        }
+        let multiplication = (numberOne,numberTwo) => {
+            answer = numberOne * numberTwo;
+        }
+
+        let calculate = () => {
+            let firstNumber = Number(prompt('Enter First Number'));
+            
+            let secondNumber = Number(prompt('Enter Second Number'));
+            
+            let calculation = Number(prompt('choose a function\n 1. addition\n 2. subtraction\n 3. division\n 4. multiplication'));
+
+            if(calculation === 1 ) {
+                addition(firstNumber,secondNumber);
+                alert('the answer is ' + answer);
+            }else if(calculation === 2) {
+                subtraction(firstNumber,secondNumber);
+                alert('the answer is ' + answer);
+            }else if(calculation === 3) {
+                division(firstNumber,secondNumber);
+                alert('the answer is ' + answer);
+            }else if(calculation === 4) {
+                multiplication(firstNumber,secondNumber);
+                alert('the answer is ' + answer);
+            }else {
+                alert('Invalid Arithmetic Function');
+            }
+        }
+        calculate();
+        location.reload();
+    </script>
+</body>
+</html>
