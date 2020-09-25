@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead >
+            <tr>
+                <th>S/N</th>
+                <th>Company Name</th>
+                <th>Company Email</th>
+                <th>Company Number</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="content">
+
+        </tbody>
+    </table>
+    <script>
+        
+        let data = [
+            {
+                "name" : "Tiidelab",
+                "email" : "ab@abc.com",
+                "phone" : 888595000,
+                "location" :  "Lagos"
+            },
+            {
+                "name" : "Bascom",
+                "email" : "ab@abc.com",
+                "phone" : 888595000,
+                "location" :  "Lagos"
+            },
+            {
+                "name" : "Apple",
+                "email" : "ab@abc.com",
+                "phone" : 888595000,
+                "location" :  "Lagos"
+            }
+        ];
+
+        let html = ` `;
+        
+            for(let i = 0; i < data.length; i++) {
+                html += "<tr>";
+                html += "<td>" + (i + 1) + "</td>";
+                html += "<td>" + data[i].name + "</td>";
+                html += "<td>" + data[i].email + "</td>";
+                html += "<td>" + data[i].phone + "</td>";
+                html += "<td>" + data[i].location + "</td>";
+                html += "</tr>";
+            }
+            
+        let output = document.getElementById('content').innerHTML = html;
+
+    </script>
+</body>
+</html>

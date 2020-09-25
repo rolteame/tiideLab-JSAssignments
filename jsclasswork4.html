@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            box-sizing: border-box;
+            background-color: rgb(100, 100, 214);
+        }
+        #users {
+            margin: 0 auto;
+            width: 30%;
+            height: auto;
+            padding: 10px;
+            background-color: rgb(58, 79, 87);
+            color: white;
+        }
+        #users img {
+            max-height: 200px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgb(28, 143, 189);
+            border-radius: 10px;
+        }
+        .addButton {
+            width: 31%;
+            padding: 5px;
+            border-radius: 5px;
+            background-color:rgb(58, 79, 87);
+            color: white;
+            outline: none;
+            border: 1px solid rgb(28, 143, 189);
+            font-size: 1.5rem;
+            transition: all 0.5s ease-in 0s;
+            position: fixed;
+            top: 5px;
+        }
+        .addButton:hover {
+            background-color: rgb(64, 184, 232, 1);
+            cursor: pointer;
+        }
+        .deleteUser, .editUser {
+            padding: 5px;
+            font-size: 14px;
+            outline: none;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-buttons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+    <div>
+        <button id="add" class="addButton" onclick="newUserInput()">Add User</button>
+    </div>
+
+    <div id="users">
+        
+    </div>
+    <script src="./jsclasswork4.js"></script>
+</body>
+</html>

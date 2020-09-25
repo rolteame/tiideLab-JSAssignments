@@ -22,11 +22,15 @@
             answer = numberOne * numberTwo;
         }
 
-        let calculate = () => {
+        let input = () => {
             let firstNumber = Number(prompt('Enter First Number'));
             
             let secondNumber = Number(prompt('Enter Second Number'));
-            
+        }
+
+        let calculate = () => {
+            input();
+
             let calculation = Number(prompt('choose a function\n 1. addition\n 2. subtraction\n 3. division\n 4. multiplication'));
 
             if(calculation === 1 ) {
