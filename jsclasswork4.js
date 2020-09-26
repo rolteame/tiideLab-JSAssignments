@@ -80,7 +80,7 @@ let deleteButton = (id) => {
 let editButton = (id) => {
     let userDetails = users[id];
 
-    document.getElementById('profilePics').value = "";
+    document.getElementById('profilePics').value;
     document.getElementById('fullName').value = userDetails.fullName;
     document.getElementById('email').value = userDetails.email;
     document.getElementById('phone').value = userDetails.phone;   
