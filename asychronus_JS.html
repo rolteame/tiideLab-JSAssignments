@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // goOut("sophia", function () {
+        //     protest()
+        // })
+    
+        // function goOut(name,callback) {
+        //     setTimeout(() => {
+        //         console.log(`${name} go out`)
+        //     }, 2000)
+            
+        // }
+    
+        // function protest() {
+        //     console.log('go and protest')
+        // }
+
+        createAudio('https://www.bensound.com/bensound-music/bensound-creativeminds.mp3', function () {
+            
+        })
+
+        function createAudio(audioSource, callback) {
+
+            return new Promise(resolve,reject) => {
+                let audio = document.createElement('audio');
+            let source = document.createElement('source');
+            audio.setAttribute('controls', 'controls');
+            audio.setAttribute('id', 'audio');
+            // audio.setAttribute('autoplay', "true")
+            source.src = audioSource;
+            audio.appendChild(source)
+            
+
+            audio.onload = function() {
+                resolve(audio);
+            }
+            audio.onerror = function() {
+                reject('Audio source not supported');
+            }
+            }
+            
+            document.body.appendChild(audio)
+        }
+
+        function playAudio() {
+            document.getElementById('audio').play();
+        }
+    </script>
+</body>
+</html>

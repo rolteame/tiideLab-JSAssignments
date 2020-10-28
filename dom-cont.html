@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="color" name="" id="color"><button onclick="changeColor()">change</button>
+    <img src="1.jpg" alt="" onblur="borderOnHover()" id="imgTest">
+    <img src="2.jpg" id="2" alt="" ondblclick="deleteElement(event)">
+    <img src="3.jpg" id="3" alt="" ondblclick="deleteElement(event)">
+
+    <script>
+        function deleteElement(e) {
+            if(confirm("are you sure you want to delete")) {
+                elementId = e.target.id
+                alert(elementId)
+
+                ele = document.getElementById(elementId)
+
+                parent = ele.parentNode;
+
+                parent.removeChild(ele);
+            }
+        }
+
+        function borderOnHover() {
+            document.getElementById('imgTest').style.cssText = "border: 3px solid black;"
+        }
+
+        function changeColor() {
+            const color = document.getElementById('color').value;
+            let img2 = document.getElementById('2');
+
+            img2.setAttribute("style", `border: 2px solid ${color}`)
+        }
+    </script>
+</body>
+</html>
